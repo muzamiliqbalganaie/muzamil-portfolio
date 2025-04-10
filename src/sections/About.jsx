@@ -18,12 +18,12 @@ const About = () => {
         <section className="c-space my-20" id='about'>
             <div className='grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-1 gap-5 h-full'>
                 <div className='col-span-1 xl:row-span-3'>
-                    <div className='grid-container'>
-                        <img src='/assets/grid1.png ' alt='grid-' className="w-full sm:h-[275px] h-fit object-contain" />
+                    <div className='grid-container '>
+                        <img src='/assets/grida.jpeg ' alt='grid-' className="w-full sm:h-[275px] h-fit object-cover border-[4px] border-[#b5b510] rounded-3xl" />
 
                         <div>
                             <p className='grid-headtext'>Hi, I'm Muzamil</p>
-                            <p className='grid-subtext'>With 1 years of experience, I have  honed my skills in frontend and backend development, with a focus on animated 3D websites.</p>
+                            <p className='grid-subtext'>With 1 years of experience, I have honed my skills in frontend and backend development, with a focus React and NextJs Framer Motion TailwindCSS.</p>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const About = () => {
 
                         <div>
                             <p className='grid-headtext'>Tech Stack</p>
-                            <p className="grid-subtext">I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosytems.</p>
+                            <p className="grid-subtext">I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosytems and TailwindCSS and Framer Motion.</p>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,9 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
                             <p className="grid-subtext">I&apos;m based in Srinagar, Kashmir and open to remote work worldwide.</p>
-                            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                            <a href='#contact' className='w-fit'>
+                                <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +89,7 @@ const About = () => {
                             <p className="grid-subtext text-center">Contact me</p>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} width={24} height={14} alt="copy" />
-                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">muzamiliqbalganaie@gmail.com</p>
+                                <p className="lg:text-2xl md:text-xl  font-serif text-gray_gradient text-white ">muzamiliqbalganaie@gmail.com</p>
                             </div>
                         </div>
                     </div>

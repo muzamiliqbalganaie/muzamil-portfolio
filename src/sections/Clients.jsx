@@ -13,9 +13,13 @@ const Clients = () => {
 
                             <div className="client-content">
                                 <div className="flex gap-3">
-                                    <img src={item.img} alt="reviewer" className="w-12 h-12 rounded-full" />
+                                    <a href={item.contact} target="_blank" rel="noopener noreferrer">
+                                        <img src={item.img} alt="reviewer" className="w-12 h-12 rounded-full hover:opacity-80 transition-opacity" />
+                                    </a>
                                     <div className="flex flex-col">
-                                        <p className="font-semibold text-white-800">{item.name}</p>
+                                        <a href={item.contact} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
+                                            <p className="font-semibold text-white-800">{item.name}</p>
+                                        </a>
                                         <p className="text-white-500 md:text-base text-sm font-light">{item.position}</p>
                                     </div>
                                 </div>
