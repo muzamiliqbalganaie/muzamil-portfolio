@@ -1,18 +1,26 @@
 {
   "name": "threejs-portfolio",
-  "private": true,
+  "homepage": "https://muzamiliqbalganaie.github.io/muzamil-portfolio/",
   "version": "0.0.0",
+  "private": true,
+  "description": "A Three Js Portfolio AMde in Three Js",
+  "license": "ISC",
+  "author": "Muzamil",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.0.5",
+    "gh-pages": "^6.3.0",
     "gsap": "^3.12.7",
     "leva": "^0.10.0",
     "maath": "^0.10.8",
