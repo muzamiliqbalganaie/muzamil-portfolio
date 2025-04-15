@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Globe from 'react-globe.gl';
 import Button from '../components/Button';
+import { Canvas } from '@react-three/fiber';
+import Carousel from '../components/CubeGallery';
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
 
@@ -16,14 +18,33 @@ const About = () => {
 
     return (
         <section className="c-space my-20" id='about'>
-            <div className='grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-1 gap-5 h-full'>
-                <div className='col-span-1 xl:row-span-3'>
-                    <div className='grid-container '>
-                        <img src='/assets/grida.jpeg ' alt='grid-' className="w-full sm:h-[275px] h-fit object-cover border-[4px] border-[#b5b510] rounded-3xl" />
+            <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-1 gap-5 h-full">
+                <div className="col-span-1 xl:row-span-3">
+                    <div className="grid-container">
+                        <Canvas className="w-full h-[275px]">
+                            <ambientLight intensity={0.5} />
+                            <Carousel
+                                images={[
+                                    { 'id': '1', 'src': '/assets/me.jpg' },
+                                    { 'id': '2', 'src': '/assets/me1.jpg' },
+                                    { 'id': '3', 'src': '/assets/me2.jpg' },
+                                    { 'id': '4', 'src': '/assets/me3.jpg' },
+                                    {
+                                        'id': '5', 'src':
+                                            '/assets/me4.jpg'
+                                    },
+                                    { 'id': '6', 'src': '/assets/me5.jpg' },
 
+                                ]}
+
+                                position={[0, 0, 0]}
+                            />
+                        </Canvas>
                         <div>
-                            <p className='grid-headtext'>Hi, I'm Muzamil</p>
-                            <p className='grid-subtext'>With 1 years of experience, I have honed my skills in frontend and backend development, with a focus React and NextJs Framer Motion TailwindCSS.</p>
+                            <p className="grid-headtext">Hi, I'm Muzamil</p>
+                            <p className="grid-subtext">
+                                With 1 year of experience, I have honed my skills in frontend and backend development, with a focus on React, Next.js, Framer Motion, and TailwindCSS.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +110,7 @@ const About = () => {
                             <p className="grid-subtext text-center">Contact me</p>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} width={24} height={14} alt="copy" />
-                                <p className="lg:text-2xl md:text-xl  font-serif text-gray_gradient text-white ">muzamiliqbalganaie@gmail.com</p>
+                                <p className="lg:text-2xl md:text-xl  text-gray_gradient text-white ">muzamiliqbalganaie@gmail.com</p>
                             </div>
                         </div>
                     </div>
